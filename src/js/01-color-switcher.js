@@ -15,11 +15,13 @@ function changeColor() {
   intervalId = setInterval(() => {
     body.style.backgroundColor = getRandomHexColor();
     startBtn.disabled = true;
+    stoptBtn.disabled = false;
     startBtn.setAttribute = 'disabled';
   }, 1000);
 }
 
 function stopInterval() {
   startBtn.disabled = false;
+  stoptBtn.disabled = true;
   clearInterval(intervalId);
 }
